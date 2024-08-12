@@ -1,0 +1,1405 @@
+@prefix hqdm: <http://example.org/hqdm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+hqdm:abstract_object a rdfs:Class ;
+    rdfs:label "abstract_object" ;
+    rdfs:subClassOf hqdm:thing .
+
+hqdm:acceptance_of_offer a rdfs:Class ;
+    rdfs:label "acceptance_of_offer" ;
+    rdfs:subClassOf hqdm:socially_constructed_activity .
+
+hqdm:acceptance_of_offer_for_goods a rdfs:Class ;
+    rdfs:label "acceptance_of_offer_for_goods" ;
+    rdfs:subClassOf hqdm:acceptance_of_offer .
+
+hqdm:activity a rdfs:Class ;
+    rdfs:label "activity" ;
+    rdfs:subClassOf hqdm:individual,
+        hqdm:state_of_activity .
+
+hqdm:aggregation a rdfs:Class ;
+    rdfs:label "aggregation" ;
+    rdfs:subClassOf hqdm:relationship .
+
+hqdm:agree_contract a rdfs:Class ;
+    rdfs:label "agree_contract" ;
+    rdfs:subClassOf hqdm:reaching_agreement .
+
+hqdm:agreement_execution a rdfs:Class ;
+    rdfs:label "agreement_execution" ;
+    rdfs:subClassOf hqdm:socially_constructed_activity .
+
+hqdm:agreement_process a rdfs:Class ;
+    rdfs:label "agreement_process" ;
+    rdfs:subClassOf hqdm:socially_constructed_activity .
+
+hqdm:amount_of_money a rdfs:Class ;
+    rdfs:label "amount_of_money" ;
+    rdfs:subClassOf hqdm:physical_object,
+        hqdm:socially_constructed_object,
+        hqdm:state_of_amount_of_money .
+
+hqdm:asset a rdfs:Class ;
+    rdfs:label "asset" ;
+    rdfs:subClassOf hqdm:participant .
+
+hqdm:association a rdfs:Class ;
+    rdfs:label "association" ;
+    rdfs:subClassOf hqdm:individual,
+        hqdm:state_of_association .
+
+hqdm:beginning_of_ownership a rdfs:Class ;
+    rdfs:label "beginning_of_ownership" ;
+    rdfs:subClassOf hqdm:event .
+
+hqdm:biological_object a rdfs:Class ;
+    rdfs:label "biological_object" ;
+    rdfs:subClassOf hqdm:physical_object,
+        hqdm:state_of_biological_object .
+
+hqdm:biological_system a rdfs:Class ;
+    rdfs:label "biological_system" ;
+    rdfs:subClassOf hqdm:ordinary_biological_object,
+        hqdm:state_of_biological_system,
+        hqdm:system .
+
+hqdm:biological_system_component a rdfs:Class ;
+    rdfs:label "biological_system_component" ;
+    rdfs:subClassOf hqdm:biological_object,
+        hqdm:state_of_biological_system_component,
+        hqdm:system_component .
+
+hqdm:class a rdfs:Class ;
+    rdfs:label "class" ;
+    rdfs:subClassOf hqdm:abstract_object .
+
+hqdm:class_of_abstract_object a rdfs:Class ;
+    rdfs:label "class_of_abstract_object" ;
+    rdfs:subClassOf hqdm:class .
+
+hqdm:class_of_activity a rdfs:Class ;
+    rdfs:label "class_of_activity" ;
+    rdfs:subClassOf hqdm:class_of_individual,
+        hqdm:class_of_state_of_activity .
+
+hqdm:class_of_agree_contract a rdfs:Class ;
+    rdfs:label "class_of_agree_contract" ;
+    rdfs:subClassOf hqdm:class_of_reaching_agreement .
+
+hqdm:class_of_agreement_execution a rdfs:Class ;
+    rdfs:label "class_of_agreement_execution" ;
+    rdfs:subClassOf hqdm:class_of_socially_constructed_activity .
+
+hqdm:class_of_agreement_process a rdfs:Class ;
+    rdfs:label "class_of_agreement_process" ;
+    rdfs:subClassOf hqdm:class_of_socially_constructed_activity .
+
+hqdm:class_of_amount_of_money a rdfs:Class ;
+    rdfs:label "class_of_amount_of_money" ;
+    rdfs:subClassOf hqdm:class_of_physical_object,
+        hqdm:class_of_socially_constructed_object,
+        hqdm:class_of_state_of_amount_of_money .
+
+hqdm:class_of_association a rdfs:Class ;
+    rdfs:label "class_of_association" ;
+    rdfs:subClassOf hqdm:class_of_individual,
+        hqdm:class_of_state_of_association .
+
+hqdm:class_of_biological_object a rdfs:Class ;
+    rdfs:label "class_of_biological_object" ;
+    rdfs:subClassOf hqdm:class_of_physical_object,
+        hqdm:class_of_state_of_biological_object .
+
+hqdm:class_of_biological_system a rdfs:Class ;
+    rdfs:label "class_of_biological_system" ;
+    rdfs:subClassOf hqdm:class_of_ordinary_biological_object,
+        hqdm:class_of_state_of_biological_system,
+        hqdm:class_of_system .
+
+hqdm:class_of_biological_system_component a rdfs:Class ;
+    rdfs:label "class_of_biological_system_component" ;
+    rdfs:subClassOf hqdm:class_of_biological_object,
+        hqdm:class_of_state_of_biological_system_component,
+        hqdm:class_of_system_component .
+
+hqdm:class_of_class a rdfs:Class ;
+    rdfs:label "class_of_class" ;
+    rdfs:subClassOf hqdm:class_of_abstract_object .
+
+hqdm:class_of_class_of_spatio_temporal_extent a rdfs:Class ;
+    rdfs:label "class_of_class_of_spatio_temporal_extent" ;
+    rdfs:subClassOf hqdm:class_of_class .
+
+hqdm:class_of_contract_execution a rdfs:Class ;
+    rdfs:label "class_of_contract_execution" ;
+    rdfs:subClassOf hqdm:class_of_agreement_execution .
+
+hqdm:class_of_contract_process a rdfs:Class ;
+    rdfs:label "class_of_contract_process" ;
+    rdfs:subClassOf hqdm:class_of_agreement_process .
+
+hqdm:class_of_event a rdfs:Class ;
+    rdfs:label "class_of_event" ;
+    rdfs:subClassOf hqdm:class_of_spatio_temporal_extent .
+
+hqdm:class_of_functional_object a rdfs:Class ;
+    rdfs:label "class_of_functional_object" ;
+    rdfs:subClassOf hqdm:class_of_intentionally_constructed_object,
+        hqdm:class_of_physical_object,
+        hqdm:class_of_state_of_functional_object .
+
+hqdm:class_of_functional_system a rdfs:Class ;
+    rdfs:label "class_of_functional_system" ;
+    rdfs:subClassOf hqdm:class_of_ordinary_functional_object,
+        hqdm:class_of_state_of_functional_system,
+        hqdm:class_of_system .
+
+hqdm:class_of_functional_system_component a rdfs:Class ;
+    rdfs:label "class_of_functional_system_component" ;
+    rdfs:subClassOf hqdm:class_of_state_of_functional_system_component,
+        hqdm:class_of_system_component .
+
+hqdm:class_of_in_place_biological_component a rdfs:Class ;
+    rdfs:label "class_of_in_place_biological_component" ;
+    rdfs:subClassOf hqdm:class_of_installed_object,
+        hqdm:class_of_state_of_biological_system_component,
+        hqdm:class_of_state_of_ordinary_biological_object .
+
+hqdm:class_of_individual a rdfs:Class ;
+    rdfs:label "class_of_individual" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:class_of_installed_functional_system_component a rdfs:Class ;
+    rdfs:label "class_of_installed_functional_system_component" ;
+    rdfs:subClassOf hqdm:class_of_installed_object,
+        hqdm:class_of_state_of_functional_system_component .
+
+hqdm:class_of_installed_object a rdfs:Class ;
+    rdfs:label "class_of_installed_object" ;
+    rdfs:subClassOf hqdm:class_of_state_of_ordinary_physical_object,
+        hqdm:class_of_state_of_system_component .
+
+hqdm:class_of_intentionally_constructed_object a rdfs:Class ;
+    rdfs:label "class_of_intentionally_constructed_object" ;
+    rdfs:subClassOf hqdm:class_of_individual,
+        hqdm:class_of_state_of_intentionally_constructed_object .
+
+hqdm:class_of_offer a rdfs:Class ;
+    rdfs:label "class_of_offer" ;
+    rdfs:subClassOf hqdm:class_of_socially_constructed_activity .
+
+hqdm:class_of_ordinary_biological_object a rdfs:Class ;
+    rdfs:label "class_of_ordinary_biological_object" ;
+    rdfs:subClassOf hqdm:class_of_biological_object,
+        hqdm:class_of_ordinary_physical_object,
+        hqdm:class_of_state_of_ordinary_biological_object .
+
+hqdm:class_of_ordinary_functional_object a rdfs:Class ;
+    rdfs:label "class_of_ordinary_functional_object" ;
+    rdfs:subClassOf hqdm:class_of_functional_object,
+        hqdm:class_of_ordinary_physical_object,
+        hqdm:class_of_state_of_ordinary_functional_object .
+
+hqdm:class_of_ordinary_physical_object a rdfs:Class ;
+    rdfs:label "class_of_ordinary_physical_object" ;
+    rdfs:subClassOf hqdm:class_of_physical_object,
+        hqdm:class_of_state_of_ordinary_physical_object .
+
+hqdm:class_of_organization a rdfs:Class ;
+    rdfs:label "class_of_organization" ;
+    rdfs:subClassOf hqdm:class_of_party,
+        hqdm:class_of_socially_constructed_object,
+        hqdm:class_of_state_of_organization .
+
+hqdm:class_of_organization_component a rdfs:Class ;
+    rdfs:label "class_of_organization_component" ;
+    rdfs:subClassOf hqdm:class_of_socially_constructed_object,
+        hqdm:class_of_state_of_organization_component,
+        hqdm:class_of_system_component .
+
+hqdm:class_of_participant a rdfs:Class ;
+    rdfs:label "class_of_participant" ;
+    rdfs:subClassOf hqdm:class_of_state_of_physical_object .
+
+hqdm:class_of_party a rdfs:Class ;
+    rdfs:label "class_of_party" ;
+    rdfs:subClassOf hqdm:class_of_state_of_party,
+        hqdm:class_of_system .
+
+hqdm:class_of_period_of_time a rdfs:Class ;
+    rdfs:label "class_of_period_of_time" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:class_of_person a rdfs:Class ;
+    rdfs:label "class_of_person" ;
+    rdfs:subClassOf hqdm:class_of_biological_system,
+        hqdm:class_of_party,
+        hqdm:class_of_state_of_person .
+
+hqdm:class_of_person_in_position a rdfs:Class ;
+    rdfs:label "class_of_person_in_position" ;
+    rdfs:subClassOf hqdm:class_of_installed_object,
+        hqdm:class_of_state_of_position .
+
+hqdm:class_of_physical_object a rdfs:Class ;
+    rdfs:label "class_of_physical_object" ;
+    rdfs:subClassOf hqdm:class_of_individual,
+        hqdm:class_of_state_of_physical_object .
+
+hqdm:class_of_physical_property a rdfs:Class ;
+    rdfs:label "class_of_physical_property" ;
+    rdfs:subClassOf hqdm:class_of_class_of_spatio_temporal_extent .
+
+hqdm:class_of_physical_quantity a rdfs:Class ;
+    rdfs:label "class_of_physical_quantity" ;
+    rdfs:subClassOf hqdm:class_of_physical_property .
+
+hqdm:class_of_point_in_time a rdfs:Class ;
+    rdfs:label "class_of_point_in_time" ;
+    rdfs:subClassOf hqdm:class_of_event .
+
+hqdm:class_of_position a rdfs:Class ;
+    rdfs:label "class_of_position" ;
+    rdfs:subClassOf hqdm:class_of_organization_component,
+        hqdm:class_of_state_of_position .
+
+hqdm:class_of_possible_world a rdfs:Class ;
+    rdfs:label "class_of_possible_world" ;
+    rdfs:subClassOf hqdm:class_of_individual,
+        hqdm:class_of_period_of_time .
+
+hqdm:class_of_reaching_agreement a rdfs:Class ;
+    rdfs:label "class_of_reaching_agreement" ;
+    rdfs:subClassOf hqdm:class_of_socially_constructed_activity .
+
+hqdm:class_of_relationship a rdfs:Class ;
+    rdfs:label "class_of_relationship" ;
+    rdfs:subClassOf hqdm:class_of_abstract_object .
+
+hqdm:class_of_representation a rdfs:Class ;
+    rdfs:label "class_of_representation" ;
+    rdfs:subClassOf hqdm:class_of_association .
+
+hqdm:class_of_sales_product_instance a rdfs:Class ;
+    rdfs:label "class_of_sales_product_instance" ;
+    rdfs:subClassOf hqdm:class_of_ordinary_functional_object,
+        hqdm:class_of_state_of_sales_product_instance .
+
+hqdm:class_of_sign a rdfs:Class ;
+    rdfs:label "class_of_sign" ;
+    rdfs:subClassOf hqdm:class_of_socially_constructed_object,
+        hqdm:class_of_state_of_sign .
+
+hqdm:class_of_socially_constructed_activity a rdfs:Class ;
+    rdfs:label "class_of_socially_constructed_activity" ;
+    rdfs:subClassOf hqdm:class_of_activity,
+        hqdm:class_of_socially_constructed_object .
+
+hqdm:class_of_socially_constructed_object a rdfs:Class ;
+    rdfs:label "class_of_socially_constructed_object" ;
+    rdfs:subClassOf hqdm:class_of_intentionally_constructed_object,
+        hqdm:class_of_state_of_socially_constructed_object .
+
+hqdm:class_of_spatio_temporal_extent a rdfs:Class ;
+    rdfs:label "class_of_spatio_temporal_extent" ;
+    rdfs:subClassOf hqdm:class .
+
+hqdm:class_of_state a rdfs:Class ;
+    rdfs:label "class_of_state" ;
+    rdfs:subClassOf hqdm:class_of_spatio_temporal_extent .
+
+hqdm:class_of_state_of_activity a rdfs:Class ;
+    rdfs:label "class_of_state_of_activity" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:class_of_state_of_amount_of_money a rdfs:Class ;
+    rdfs:label "class_of_state_of_amount_of_money" ;
+    rdfs:subClassOf hqdm:class_of_state_of_physical_object,
+        hqdm:class_of_state_of_socially_constructed_object .
+
+hqdm:class_of_state_of_association a rdfs:Class ;
+    rdfs:label "class_of_state_of_association" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:class_of_state_of_biological_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_biological_object" ;
+    rdfs:subClassOf hqdm:class_of_state_of_physical_object .
+
+hqdm:class_of_state_of_biological_system a rdfs:Class ;
+    rdfs:label "class_of_state_of_biological_system" ;
+    rdfs:subClassOf hqdm:class_of_state_of_ordinary_biological_object,
+        hqdm:class_of_state_of_system .
+
+hqdm:class_of_state_of_biological_system_component a rdfs:Class ;
+    rdfs:label "class_of_state_of_biological_system_component" ;
+    rdfs:subClassOf hqdm:class_of_state_of_biological_object,
+        hqdm:class_of_state_of_system_component .
+
+hqdm:class_of_state_of_functional_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_functional_object" ;
+    rdfs:subClassOf hqdm:class_of_state_of_intentionally_constructed_object,
+        hqdm:class_of_state_of_physical_object .
+
+hqdm:class_of_state_of_functional_system a rdfs:Class ;
+    rdfs:label "class_of_state_of_functional_system" ;
+    rdfs:subClassOf hqdm:class_of_state_of_ordinary_functional_object,
+        hqdm:class_of_state_of_system .
+
+hqdm:class_of_state_of_functional_system_component a rdfs:Class ;
+    rdfs:label "class_of_state_of_functional_system_component" ;
+    rdfs:subClassOf hqdm:class_of_state_of_ordinary_functional_object,
+        hqdm:class_of_state_of_system_component .
+
+hqdm:class_of_state_of_intentionally_constructed_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_intentionally_constructed_object" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:class_of_state_of_ordinary_biological_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_ordinary_biological_object" ;
+    rdfs:subClassOf hqdm:class_of_state_of_biological_object,
+        hqdm:class_of_state_of_ordinary_physical_object .
+
+hqdm:class_of_state_of_ordinary_functional_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_ordinary_functional_object" ;
+    rdfs:subClassOf hqdm:class_of_state_of_functional_object,
+        hqdm:class_of_state_of_ordinary_physical_object .
+
+hqdm:class_of_state_of_ordinary_physical_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_ordinary_physical_object" ;
+    rdfs:subClassOf hqdm:class_of_state_of_physical_object .
+
+hqdm:class_of_state_of_organization a rdfs:Class ;
+    rdfs:label "class_of_state_of_organization" ;
+    rdfs:subClassOf hqdm:class_of_state_of_party,
+        hqdm:class_of_state_of_socially_constructed_object .
+
+hqdm:class_of_state_of_organization_component a rdfs:Class ;
+    rdfs:label "class_of_state_of_organization_component" ;
+    rdfs:subClassOf hqdm:class_of_state_of_socially_constructed_object,
+        hqdm:class_of_state_of_system_component .
+
+hqdm:class_of_state_of_party a rdfs:Class ;
+    rdfs:label "class_of_state_of_party" ;
+    rdfs:subClassOf hqdm:class_of_state_of_system .
+
+hqdm:class_of_state_of_person a rdfs:Class ;
+    rdfs:label "class_of_state_of_person" ;
+    rdfs:subClassOf hqdm:class_of_state_of_biological_system,
+        hqdm:class_of_state_of_party .
+
+hqdm:class_of_state_of_physical_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_physical_object" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:class_of_state_of_position a rdfs:Class ;
+    rdfs:label "class_of_state_of_position" ;
+    rdfs:subClassOf hqdm:class_of_state_of_organization_component .
+
+hqdm:class_of_state_of_sales_product_instance a rdfs:Class ;
+    rdfs:label "class_of_state_of_sales_product_instance" ;
+    rdfs:subClassOf hqdm:class_of_state_of_ordinary_functional_object .
+
+hqdm:class_of_state_of_sign a rdfs:Class ;
+    rdfs:label "class_of_state_of_sign" ;
+    rdfs:subClassOf hqdm:class_of_state_of_socially_constructed_object .
+
+hqdm:class_of_state_of_socially_constructed_activity a rdfs:Class ;
+    rdfs:label "class_of_state_of_socially_constructed_activity" ;
+    rdfs:subClassOf hqdm:class_of_state_of_activity,
+        hqdm:class_of_state_of_socially_constructed_object .
+
+hqdm:class_of_state_of_socially_constructed_object a rdfs:Class ;
+    rdfs:label "class_of_state_of_socially_constructed_object" ;
+    rdfs:subClassOf hqdm:class_of_state_of_intentionally_constructed_object .
+
+hqdm:class_of_state_of_system a rdfs:Class ;
+    rdfs:label "class_of_state_of_system" ;
+    rdfs:subClassOf hqdm:class_of_state_of_ordinary_physical_object .
+
+hqdm:class_of_state_of_system_component a rdfs:Class ;
+    rdfs:label "class_of_state_of_system_component" ;
+    rdfs:subClassOf hqdm:class_of_state_of_physical_object .
+
+hqdm:class_of_system a rdfs:Class ;
+    rdfs:label "class_of_system" ;
+    rdfs:subClassOf hqdm:class_of_ordinary_physical_object,
+        hqdm:class_of_state_of_system .
+
+hqdm:class_of_system_component a rdfs:Class ;
+    rdfs:label "class_of_system_component" ;
+    rdfs:subClassOf hqdm:class_of_physical_object,
+        hqdm:class_of_state_of_system_component .
+
+hqdm:classification a rdfs:Class ;
+    rdfs:label "classification" ;
+    rdfs:subClassOf hqdm:relationship .
+
+hqdm:composition a rdfs:Class ;
+    rdfs:label "composition" ;
+    rdfs:subClassOf hqdm:aggregation .
+
+hqdm:contract_execution a rdfs:Class ;
+    rdfs:label "contract_execution" ;
+    rdfs:subClassOf hqdm:agreement_execution .
+
+hqdm:contract_process a rdfs:Class ;
+    rdfs:label "contract_process" ;
+    rdfs:subClassOf hqdm:agreement_process .
+
+hqdm:currency a rdfs:Class ;
+    rdfs:label "currency" ;
+    rdfs:subClassOf hqdm:class_of_amount_of_money .
+
+hqdm:defined_relationship a rdfs:Class ;
+    rdfs:label "defined_relationship" ;
+    rdfs:subClassOf hqdm:relationship .
+
+hqdm:definition a rdfs:Class ;
+    rdfs:label "definition" ;
+    rdfs:subClassOf hqdm:representation_by_pattern .
+
+hqdm:description a rdfs:Class ;
+    rdfs:label "description" ;
+    rdfs:subClassOf hqdm:representation_by_pattern .
+
+hqdm:employee a rdfs:Class ;
+    rdfs:label "employee" ;
+    rdfs:subClassOf hqdm:participant,
+        hqdm:state_of_person .
+
+hqdm:employer a rdfs:Class ;
+    rdfs:label "employer" ;
+    rdfs:subClassOf hqdm:participant,
+        hqdm:state_of_party .
+
+hqdm:employment a rdfs:Class ;
+    rdfs:label "employment" ;
+    rdfs:subClassOf hqdm:association .
+
+hqdm:ending_of_ownership a rdfs:Class ;
+    rdfs:label "ending_of_ownership" ;
+    rdfs:subClassOf hqdm:event .
+
+hqdm:enumerated_class a rdfs:Class ;
+    rdfs:label "enumerated_class" ;
+    rdfs:subClassOf hqdm:class .
+
+hqdm:event a rdfs:Class ;
+    rdfs:label "event" ;
+    rdfs:subClassOf hqdm:spatio_temporal_extent .
+
+hqdm:exchange_of_goods_and_money a rdfs:Class ;
+    rdfs:label "exchange_of_goods_and_money" ;
+    rdfs:subClassOf hqdm:contract_execution .
+
+hqdm:function_ a rdfs:Class ;
+    rdfs:label "function_" ;
+    rdfs:subClassOf hqdm:relationship .
+
+hqdm:functional_object a rdfs:Class ;
+    rdfs:label "functional_object" ;
+    rdfs:subClassOf hqdm:intentionally_constructed_object,
+        hqdm:physical_object,
+        hqdm:state_of_functional_object .
+
+hqdm:functional_system a rdfs:Class ;
+    rdfs:label "functional_system" ;
+    rdfs:subClassOf hqdm:ordinary_functional_object,
+        hqdm:state_of_functional_system,
+        hqdm:system .
+
+hqdm:functional_system_component a rdfs:Class ;
+    rdfs:label "functional_system_component" ;
+    rdfs:subClassOf hqdm:functional_object,
+        hqdm:state_of_functional_system_component,
+        hqdm:system_component .
+
+hqdm:identification a rdfs:Class ;
+    rdfs:label "identification" ;
+    rdfs:subClassOf hqdm:representation_by_pattern .
+
+hqdm:identification_of_physical_quantity a rdfs:Class ;
+    rdfs:label "identification_of_physical_quantity" ;
+    rdfs:subClassOf hqdm:identification .
+
+hqdm:in_place_biological_component a rdfs:Class ;
+    rdfs:label "in_place_biological_component" ;
+    rdfs:subClassOf hqdm:installed_object,
+        hqdm:state_of_biological_system_component,
+        hqdm:state_of_ordinary_biological_object .
+
+hqdm:individual a rdfs:Class ;
+    rdfs:label "individual" ;
+    rdfs:subClassOf hqdm:state .
+
+hqdm:installed_functional_system_component a rdfs:Class ;
+    rdfs:label "installed_functional_system_component" ;
+    rdfs:subClassOf hqdm:installed_object,
+        hqdm:state_of_functional_system_component,
+        hqdm:state_of_ordinary_functional_object .
+
+hqdm:installed_object a rdfs:Class ;
+    rdfs:label "installed_object" ;
+    rdfs:subClassOf hqdm:state_of_ordinary_physical_object,
+        hqdm:state_of_system_component .
+
+hqdm:intentionally_constructed_object a rdfs:Class ;
+    rdfs:label "intentionally_constructed_object" ;
+    rdfs:subClassOf hqdm:individual,
+        hqdm:state_of_intentionally_constructed_object .
+
+hqdm:kind_of_activity a rdfs:Class ;
+    rdfs:label "kind_of_activity" ;
+    rdfs:subClassOf hqdm:class_of_activity .
+
+hqdm:kind_of_association a rdfs:Class ;
+    rdfs:label "kind_of_association" ;
+    rdfs:subClassOf hqdm:class_of_association .
+
+hqdm:kind_of_biological_object a rdfs:Class ;
+    rdfs:label "kind_of_biological_object" ;
+    rdfs:subClassOf hqdm:class_of_biological_object,
+        hqdm:kind_of_physical_object .
+
+hqdm:kind_of_biological_system a rdfs:Class ;
+    rdfs:label "kind_of_biological_system" ;
+    rdfs:subClassOf hqdm:class_of_biological_system,
+        hqdm:kind_of_system .
+
+hqdm:kind_of_biological_system_component a rdfs:Class ;
+    rdfs:label "kind_of_biological_system_component" ;
+    rdfs:subClassOf hqdm:class_of_biological_system_component,
+        hqdm:kind_of_system_component .
+
+hqdm:kind_of_functional_object a rdfs:Class ;
+    rdfs:label "kind_of_functional_object" ;
+    rdfs:subClassOf hqdm:class_of_functional_object,
+        hqdm:kind_of_intentionally_constructed_object,
+        hqdm:kind_of_physical_object .
+
+hqdm:kind_of_functional_system a rdfs:Class ;
+    rdfs:label "kind_of_functional_system" ;
+    rdfs:subClassOf hqdm:class_of_functional_system,
+        hqdm:kind_of_system .
+
+hqdm:kind_of_functional_system_component a rdfs:Class ;
+    rdfs:label "kind_of_functional_system_component" ;
+    rdfs:subClassOf hqdm:class_of_functional_system_component,
+        hqdm:kind_of_system_component .
+
+hqdm:kind_of_individual a rdfs:Class ;
+    rdfs:label "kind_of_individual" ;
+    rdfs:subClassOf hqdm:class_of_individual .
+
+hqdm:kind_of_intentionally_constructed_object a rdfs:Class ;
+    rdfs:label "kind_of_intentionally_constructed_object" ;
+    rdfs:subClassOf hqdm:class_of_intentionally_constructed_object,
+        hqdm:kind_of_individual .
+
+hqdm:kind_of_ordinary_biological_object a rdfs:Class ;
+    rdfs:label "kind_of_ordinary_biological_object" ;
+    rdfs:subClassOf hqdm:class_of_ordinary_biological_object,
+        hqdm:kind_of_biological_object,
+        hqdm:kind_of_ordinary_physical_object .
+
+hqdm:kind_of_ordinary_functional_object a rdfs:Class ;
+    rdfs:label "kind_of_ordinary_functional_object" ;
+    rdfs:subClassOf hqdm:class_of_ordinary_functional_object,
+        hqdm:kind_of_functional_object,
+        hqdm:kind_of_ordinary_physical_object .
+
+hqdm:kind_of_ordinary_physical_object a rdfs:Class ;
+    rdfs:label "kind_of_ordinary_physical_object" ;
+    rdfs:subClassOf hqdm:class_of_ordinary_physical_object,
+        hqdm:kind_of_physical_object .
+
+hqdm:kind_of_organization a rdfs:Class ;
+    rdfs:label "kind_of_organization" ;
+    rdfs:subClassOf hqdm:class_of_organization,
+        hqdm:kind_of_party,
+        hqdm:kind_of_socially_constructed_object .
+
+hqdm:kind_of_organization_component a rdfs:Class ;
+    rdfs:label "kind_of_organization_component" ;
+    rdfs:subClassOf hqdm:class_of_organization_component,
+        hqdm:kind_of_socially_constructed_object,
+        hqdm:kind_of_system_component .
+
+hqdm:kind_of_party a rdfs:Class ;
+    rdfs:label "kind_of_party" ;
+    rdfs:subClassOf hqdm:class_of_party,
+        hqdm:kind_of_system .
+
+hqdm:kind_of_person a rdfs:Class ;
+    rdfs:label "kind_of_person" ;
+    rdfs:subClassOf hqdm:class_of_person,
+        hqdm:kind_of_party .
+
+hqdm:kind_of_physical_object a rdfs:Class ;
+    rdfs:label "kind_of_physical_object" ;
+    rdfs:subClassOf hqdm:class_of_physical_object,
+        hqdm:kind_of_individual .
+
+hqdm:kind_of_physical_property a rdfs:Class ;
+    rdfs:label "kind_of_physical_property" ;
+    rdfs:subClassOf hqdm:class_of_physical_property .
+
+hqdm:kind_of_physical_quantity a rdfs:Class ;
+    rdfs:label "kind_of_physical_quantity" ;
+    rdfs:subClassOf hqdm:class_of_physical_quantity,
+        hqdm:kind_of_physical_property .
+
+hqdm:kind_of_position a rdfs:Class ;
+    rdfs:label "kind_of_position" ;
+    rdfs:subClassOf hqdm:class_of_position,
+        hqdm:kind_of_organization_component .
+
+hqdm:kind_of_relationship_with_restriction a rdfs:Class ;
+    rdfs:label "kind_of_relationship_with_restriction" ;
+    rdfs:subClassOf hqdm:kind_of_relationship_with_signature .
+
+hqdm:kind_of_relationship_with_signature a rdfs:Class ;
+    rdfs:label "kind_of_relationship_with_signature" ;
+    rdfs:subClassOf hqdm:class_of_relationship .
+
+hqdm:kind_of_socially_constructed_object a rdfs:Class ;
+    rdfs:label "kind_of_socially_constructed_object" ;
+    rdfs:subClassOf hqdm:class_of_socially_constructed_object,
+        hqdm:kind_of_intentionally_constructed_object .
+
+hqdm:kind_of_system a rdfs:Class ;
+    rdfs:label "kind_of_system" ;
+    rdfs:subClassOf hqdm:class_of_system,
+        hqdm:kind_of_ordinary_physical_object .
+
+hqdm:kind_of_system_component a rdfs:Class ;
+    rdfs:label "kind_of_system_component" ;
+    rdfs:subClassOf hqdm:class_of_system_component,
+        hqdm:kind_of_physical_object .
+
+hqdm:language_community a rdfs:Class ;
+    rdfs:label "language_community" ;
+    rdfs:subClassOf hqdm:organization,
+        hqdm:state_of_language_community .
+
+hqdm:money_asset a rdfs:Class ;
+    rdfs:label "money_asset" ;
+    rdfs:subClassOf hqdm:asset,
+        hqdm:state_of_amount_of_money .
+
+hqdm:offer a rdfs:Class ;
+    rdfs:label "offer" ;
+    rdfs:subClassOf hqdm:socially_constructed_activity .
+
+hqdm:offer_and_acceptance_for_goods a rdfs:Class ;
+    rdfs:label "offer_and_acceptance_for_goods" ;
+    rdfs:subClassOf hqdm:agree_contract .
+
+hqdm:offer_for_goods a rdfs:Class ;
+    rdfs:label "offer_for_goods" ;
+    rdfs:subClassOf hqdm:offer .
+
+hqdm:offering a rdfs:Class ;
+    rdfs:label "offering" ;
+    rdfs:subClassOf hqdm:class_of_offer .
+
+hqdm:ordinary_biological_object a rdfs:Class ;
+    rdfs:label "ordinary_biological_object" ;
+    rdfs:subClassOf hqdm:biological_object,
+        hqdm:ordinary_physical_object,
+        hqdm:state_of_ordinary_biological_object .
+
+hqdm:ordinary_functional_object a rdfs:Class ;
+    rdfs:label "ordinary_functional_object" ;
+    rdfs:subClassOf hqdm:functional_object,
+        hqdm:ordinary_physical_object,
+        hqdm:state_of_ordinary_functional_object .
+
+hqdm:ordinary_physical_object a rdfs:Class ;
+    rdfs:label "ordinary_physical_object" ;
+    rdfs:subClassOf hqdm:physical_object,
+        hqdm:state_of_ordinary_physical_object .
+
+hqdm:organization a rdfs:Class ;
+    rdfs:label "organization" ;
+    rdfs:subClassOf hqdm:party,
+        hqdm:socially_constructed_object,
+        hqdm:state_of_organization .
+
+hqdm:organization_component a rdfs:Class ;
+    rdfs:label "organization_component" ;
+    rdfs:subClassOf hqdm:socially_constructed_object,
+        hqdm:state_of_organization_component,
+        hqdm:system_component .
+
+hqdm:owner a rdfs:Class ;
+    rdfs:label "owner" ;
+    rdfs:subClassOf hqdm:participant,
+        hqdm:state_of_party .
+
+hqdm:ownership a rdfs:Class ;
+    rdfs:label "ownership" ;
+    rdfs:subClassOf hqdm:association .
+
+hqdm:participant a rdfs:Class ;
+    rdfs:label "participant" ;
+    rdfs:subClassOf hqdm:state_of_physical_object .
+
+hqdm:party a rdfs:Class ;
+    rdfs:label "party" ;
+    rdfs:subClassOf hqdm:state_of_party,
+        hqdm:system .
+
+hqdm:pattern a rdfs:Class ;
+    rdfs:label "pattern" ;
+    rdfs:subClassOf hqdm:class_of_sign .
+
+hqdm:period_of_time a rdfs:Class ;
+    rdfs:label "period_of_time" ;
+    rdfs:subClassOf hqdm:state .
+
+hqdm:person a rdfs:Class ;
+    rdfs:label "person" ;
+    rdfs:subClassOf hqdm:biological_system,
+        hqdm:party,
+        hqdm:state_of_person .
+
+hqdm:person_in_position a rdfs:Class ;
+    rdfs:label "person_in_position" ;
+    rdfs:subClassOf hqdm:installed_object,
+        hqdm:state_of_person,
+        hqdm:state_of_position .
+
+hqdm:physical_object a rdfs:Class ;
+    rdfs:label "physical_object" ;
+    rdfs:subClassOf hqdm:individual,
+        hqdm:state_of_physical_object .
+
+hqdm:physical_property a rdfs:Class ;
+    rdfs:label "physical_property" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:physical_property_range a rdfs:Class ;
+    rdfs:label "physical_property_range" ;
+    rdfs:subClassOf hqdm:class_of_state .
+
+hqdm:physical_quantity a rdfs:Class ;
+    rdfs:label "physical_quantity" ;
+    rdfs:subClassOf hqdm:physical_property .
+
+hqdm:physical_quantity_range a rdfs:Class ;
+    rdfs:label "physical_quantity_range" ;
+    rdfs:subClassOf hqdm:physical_property_range .
+
+hqdm:plan a rdfs:Class ;
+    rdfs:label "plan" ;
+    rdfs:subClassOf hqdm:possible_world .
+
+hqdm:point_in_time a rdfs:Class ;
+    rdfs:label "point_in_time" ;
+    rdfs:subClassOf hqdm:event .
+
+hqdm:position a rdfs:Class ;
+    rdfs:label "position" ;
+    rdfs:subClassOf hqdm:organization_component,
+        hqdm:state_of_position .
+
+hqdm:possible_world a rdfs:Class ;
+    rdfs:label "possible_world" ;
+    rdfs:subClassOf hqdm:individual,
+        hqdm:period_of_time .
+
+hqdm:price a rdfs:Class ;
+    rdfs:label "price" ;
+    rdfs:subClassOf hqdm:class_of_amount_of_money .
+
+hqdm:product_brand a rdfs:Class ;
+    rdfs:label "product_brand" ;
+    rdfs:subClassOf hqdm:class_of_sales_product_instance .
+
+hqdm:product_offering a rdfs:Class ;
+    rdfs:label "product_offering" ;
+    rdfs:subClassOf hqdm:offering .
+
+hqdm:reaching_agreement a rdfs:Class ;
+    rdfs:label "reaching_agreement" ;
+    rdfs:subClassOf hqdm:socially_constructed_activity .
+
+hqdm:recognizing_language_community a rdfs:Class ;
+    rdfs:label "recognizing_language_community" ;
+    rdfs:subClassOf hqdm:participant,
+        hqdm:state_of_language_community .
+
+hqdm:relationship a rdfs:Class ;
+    rdfs:label "relationship" ;
+    rdfs:subClassOf hqdm:abstract_object .
+
+hqdm:representation_by_pattern a rdfs:Class ;
+    rdfs:label "representation_by_pattern" ;
+    rdfs:subClassOf hqdm:class_of_representation .
+
+hqdm:representation_by_sign a rdfs:Class ;
+    rdfs:label "representation_by_sign" ;
+    rdfs:subClassOf hqdm:association .
+
+hqdm:requirement a rdfs:Class ;
+    rdfs:label "requirement" ;
+    rdfs:subClassOf hqdm:spatio_temporal_extent .
+
+hqdm:requirement_specification a rdfs:Class ;
+    rdfs:label "requirement_specification" ;
+    rdfs:subClassOf hqdm:class_of_spatio_temporal_extent .
+
+hqdm:role a rdfs:Class ;
+    rdfs:label "role" ;
+    rdfs:subClassOf hqdm:class_of_participant .
+
+hqdm:sale_of_goods a rdfs:Class ;
+    rdfs:label "sale_of_goods" ;
+    rdfs:subClassOf hqdm:contract_process .
+
+hqdm:sales_product a rdfs:Class ;
+    rdfs:label "sales_product" ;
+    rdfs:subClassOf hqdm:class_of_sales_product_instance .
+
+hqdm:sales_product_instance a rdfs:Class ;
+    rdfs:label "sales_product_instance" ;
+    rdfs:subClassOf hqdm:ordinary_functional_object,
+        hqdm:state_of_sales_product_instance .
+
+hqdm:sales_product_version a rdfs:Class ;
+    rdfs:label "sales_product_version" ;
+    rdfs:subClassOf hqdm:class_of_sales_product_instance .
+
+hqdm:scale a rdfs:Class ;
+    rdfs:label "scale" ;
+    rdfs:subClassOf hqdm:function_ .
+
+hqdm:sign a rdfs:Class ;
+    rdfs:label "sign" ;
+    rdfs:subClassOf hqdm:participant,
+        hqdm:socially_constructed_object,
+        hqdm:state_of_sign .
+
+hqdm:socially_constructed_activity a rdfs:Class ;
+    rdfs:label "socially_constructed_activity" ;
+    rdfs:subClassOf hqdm:activity,
+        hqdm:socially_constructed_object .
+
+hqdm:socially_constructed_object a rdfs:Class ;
+    rdfs:label "socially_constructed_object" ;
+    rdfs:subClassOf hqdm:intentionally_constructed_object,
+        hqdm:state_of_socially_constructed_object .
+
+hqdm:spatio_temporal_extent a rdfs:Class ;
+    rdfs:label "spatio_temporal_extent" ;
+    rdfs:subClassOf hqdm:thing .
+
+hqdm:specialization a rdfs:Class ;
+    rdfs:label "specialization" ;
+    rdfs:subClassOf hqdm:relationship .
+
+hqdm:state a rdfs:Class ;
+    rdfs:label "state" ;
+    rdfs:subClassOf hqdm:spatio_temporal_extent .
+
+hqdm:state_of_activity a rdfs:Class ;
+    rdfs:label "state_of_activity" ;
+    rdfs:subClassOf hqdm:state .
+
+hqdm:state_of_amount_of_money a rdfs:Class ;
+    rdfs:label "state_of_amount_of_money" ;
+    rdfs:subClassOf hqdm:state_of_physical_object,
+        hqdm:state_of_socially_constructed_object .
+
+hqdm:state_of_association a rdfs:Class ;
+    rdfs:label "state_of_association" ;
+    rdfs:subClassOf hqdm:state .
+
+hqdm:state_of_biological_object a rdfs:Class ;
+    rdfs:label "state_of_biological_object" ;
+    rdfs:subClassOf hqdm:state_of_physical_object .
+
+hqdm:state_of_biological_system a rdfs:Class ;
+    rdfs:label "state_of_biological_system" ;
+    rdfs:subClassOf hqdm:state_of_ordinary_biological_object,
+        hqdm:state_of_system .
+
+hqdm:state_of_biological_system_component a rdfs:Class ;
+    rdfs:label "state_of_biological_system_component" ;
+    rdfs:subClassOf hqdm:state_of_biological_object,
+        hqdm:state_of_system_component .
+
+hqdm:state_of_functional_object a rdfs:Class ;
+    rdfs:label "state_of_functional_object" ;
+    rdfs:subClassOf hqdm:state_of_intentionally_constructed_object,
+        hqdm:state_of_physical_object .
+
+hqdm:state_of_functional_system a rdfs:Class ;
+    rdfs:label "state_of_functional_system" ;
+    rdfs:subClassOf hqdm:state_of_ordinary_functional_object,
+        hqdm:state_of_system .
+
+hqdm:state_of_functional_system_component a rdfs:Class ;
+    rdfs:label "state_of_functional_system_component" ;
+    rdfs:subClassOf hqdm:state_of_functional_object,
+        hqdm:state_of_system_component .
+
+hqdm:state_of_intentionally_constructed_object a rdfs:Class ;
+    rdfs:label "state_of_intentionally_constructed_object" ;
+    rdfs:subClassOf hqdm:state .
+
+hqdm:state_of_language_community a rdfs:Class ;
+    rdfs:label "state_of_language_community" ;
+    rdfs:subClassOf hqdm:state_of_organization .
+
+hqdm:state_of_ordinary_biological_object a rdfs:Class ;
+    rdfs:label "state_of_ordinary_biological_object" ;
+    rdfs:subClassOf hqdm:state_of_biological_object,
+        hqdm:state_of_ordinary_physical_object .
+
+hqdm:state_of_ordinary_functional_object a rdfs:Class ;
+    rdfs:label "state_of_ordinary_functional_object" ;
+    rdfs:subClassOf hqdm:state_of_functional_object,
+        hqdm:state_of_ordinary_physical_object .
+
+hqdm:state_of_ordinary_physical_object a rdfs:Class ;
+    rdfs:label "state_of_ordinary_physical_object" ;
+    rdfs:subClassOf hqdm:state_of_physical_object .
+
+hqdm:state_of_organization a rdfs:Class ;
+    rdfs:label "state_of_organization" ;
+    rdfs:subClassOf hqdm:state_of_party,
+        hqdm:state_of_socially_constructed_object .
+
+hqdm:state_of_organization_component a rdfs:Class ;
+    rdfs:label "state_of_organization_component" ;
+    rdfs:subClassOf hqdm:state_of_socially_constructed_object,
+        hqdm:state_of_system_component .
+
+hqdm:state_of_party a rdfs:Class ;
+    rdfs:label "state_of_party" ;
+    rdfs:subClassOf hqdm:state_of_system .
+
+hqdm:state_of_person a rdfs:Class ;
+    rdfs:label "state_of_person" ;
+    rdfs:subClassOf hqdm:state_of_biological_system,
+        hqdm:state_of_party .
+
+hqdm:state_of_physical_object a rdfs:Class ;
+    rdfs:label "state_of_physical_object" ;
+    rdfs:subClassOf hqdm:state .
+
+hqdm:state_of_position a rdfs:Class ;
+    rdfs:label "state_of_position" ;
+    rdfs:subClassOf hqdm:state_of_organization_component .
+
+hqdm:state_of_sales_product_instance a rdfs:Class ;
+    rdfs:label "state_of_sales_product_instance" ;
+    rdfs:subClassOf hqdm:state_of_ordinary_functional_object .
+
+hqdm:state_of_sign a rdfs:Class ;
+    rdfs:label "state_of_sign" ;
+    rdfs:subClassOf hqdm:state_of_socially_constructed_object .
+
+hqdm:state_of_socially_constructed_activity a rdfs:Class ;
+    rdfs:label "state_of_socially_constructed_activity" ;
+    rdfs:subClassOf hqdm:state_of_activity,
+        hqdm:state_of_socially_constructed_object .
+
+hqdm:state_of_socially_constructed_object a rdfs:Class ;
+    rdfs:label "state_of_socially_constructed_object" ;
+    rdfs:subClassOf hqdm:state_of_intentionally_constructed_object .
+
+hqdm:state_of_system a rdfs:Class ;
+    rdfs:label "state_of_system" ;
+    rdfs:subClassOf hqdm:state_of_ordinary_physical_object .
+
+hqdm:state_of_system_component a rdfs:Class ;
+    rdfs:label "state_of_system_component" ;
+    rdfs:subClassOf hqdm:state_of_physical_object .
+
+hqdm:system a rdfs:Class ;
+    rdfs:label "system" ;
+    rdfs:subClassOf hqdm:ordinary_physical_object,
+        hqdm:state_of_system .
+
+hqdm:system_component a rdfs:Class ;
+    rdfs:label "system_component" ;
+    rdfs:subClassOf hqdm:physical_object,
+        hqdm:state_of_system_component .
+
+hqdm:temporal_composition a rdfs:Class ;
+    rdfs:label "temporal_composition" ;
+    rdfs:subClassOf hqdm:composition .
+
+hqdm:thing a rdfs:Class ;
+    rdfs:label "thing" .
+
+hqdm:transfer_of_ownership a rdfs:Class ;
+    rdfs:label "transfer_of_ownership" ;
+    rdfs:subClassOf hqdm:socially_constructed_activity .
+
+hqdm:transfer_of_ownership_of_money a rdfs:Class ;
+    rdfs:label "transfer_of_ownership_of_money" ;
+    rdfs:subClassOf hqdm:transfer_of_ownership .
+
+hqdm:transferee a rdfs:Class ;
+    rdfs:label "transferee" ;
+    rdfs:subClassOf hqdm:participant,
+        hqdm:state_of_party .
+
+hqdm:transferor a rdfs:Class ;
+    rdfs:label "transferor" ;
+    rdfs:subClassOf hqdm:participant,
+        hqdm:state_of_party .
+
+hqdm:unit_of_measure a rdfs:Class ;
+    rdfs:label "unit_of_measure" ;
+    rdfs:subClassOf hqdm:function_ .
+
+hqdm:aggregated_into a rdf:Property ;
+    rdfs:label "aggregated_into" ;
+    rdfs:domain hqdm:spatio_temporal_extent ;
+    rdfs:range hqdm:spatio_temporal_extent .
+
+hqdm:beginning a rdf:Property ;
+    rdfs:label "beginning" ;
+    rdfs:domain hqdm:spatio_temporal_extent ;
+    rdfs:range hqdm:event .
+
+hqdm:causes a rdf:Property ;
+    rdfs:label "causes" ;
+    rdfs:domain hqdm:activity ;
+    rdfs:range hqdm:event .
+
+hqdm:causes_beginning a rdf:Property ;
+    rdfs:label "causes_beginning" ;
+    rdfs:domain hqdm:transfer_of_ownership ;
+    rdfs:range hqdm:beginning_of_ownership .
+
+hqdm:causes_by_class a rdf:Property ;
+    rdfs:label "causes_by_class" ;
+    rdfs:domain hqdm:kind_of_activity ;
+    rdfs:range hqdm:class_of_event .
+
+hqdm:causes_ending a rdf:Property ;
+    rdfs:label "causes_ending" ;
+    rdfs:domain hqdm:transfer_of_ownership ;
+    rdfs:range hqdm:ending_of_ownership .
+
+hqdm:class_of_offered a rdf:Property ;
+    rdfs:label "class_of_offered" ;
+    rdfs:domain hqdm:offering ;
+    rdfs:range hqdm:class_of_individual .
+
+hqdm:classifier a rdf:Property ;
+    rdfs:label "classifier" ;
+    rdfs:domain hqdm:classification ;
+    rdfs:range hqdm:class .
+
+hqdm:component_by_class a rdf:Property ;
+    rdfs:label "component_by_class" ;
+    rdfs:domain hqdm:kind_of_organization ;
+    rdfs:range hqdm:kind_of_organization_component .
+
+hqdm:component_of a rdf:Property ;
+    rdfs:label "component_of" ;
+    rdfs:domain hqdm:system_component ;
+    rdfs:range hqdm:system .
+
+hqdm:consideration_by_class a rdf:Property ;
+    rdfs:label "consideration_by_class" ;
+    rdfs:domain hqdm:offering ;
+    rdfs:range hqdm:price .
+
+hqdm:consists_of_by_class a rdf:Property ;
+    rdfs:label "consists_of_by_class" ;
+    rdfs:domain hqdm:representation_by_pattern ;
+    rdfs:range hqdm:pattern .
+
+hqdm:consists_of_in_members a rdf:Property ;
+    rdfs:label "consists_of_in_members" ;
+    rdfs:domain hqdm:representation_by_pattern ;
+    rdfs:range hqdm:recognizing_language_community .
+
+hqdm:defined_by a rdf:Property ;
+    rdfs:label "defined_by" ;
+    rdfs:domain hqdm:requirement ;
+    rdfs:range hqdm:requirement_specification .
+
+hqdm:determines a rdf:Property ;
+    rdfs:label "determines" ;
+    rdfs:domain hqdm:activity ;
+    rdfs:range hqdm:thing .
+
+hqdm:determines_by_class a rdf:Property ;
+    rdfs:label "determines_by_class" ;
+    rdfs:domain hqdm:kind_of_activity ;
+    rdfs:range hqdm:class .
+
+hqdm:domain a rdf:Property ;
+    rdfs:label "domain" ;
+    rdfs:domain hqdm:scale ;
+    rdfs:range hqdm:kind_of_physical_quantity .
+
+hqdm:ending a rdf:Property ;
+    rdfs:label "ending" ;
+    rdfs:domain hqdm:spatio_temporal_extent ;
+    rdfs:range hqdm:event .
+
+hqdm:has_component_by_class a rdf:Property ;
+    rdfs:label "has_component_by_class" ;
+    rdfs:domain hqdm:kind_of_system ;
+    rdfs:range hqdm:kind_of_system_component .
+
+hqdm:has_superclass a rdf:Property ;
+    rdfs:label "has_superclass" ;
+    rdfs:domain hqdm:class ;
+    rdfs:range hqdm:class .
+
+hqdm:intended_role a rdf:Property ;
+    rdfs:label "intended_role" ;
+    rdfs:domain hqdm:functional_object ;
+    rdfs:range hqdm:role .
+
+hqdm:intended_role_by_class a rdf:Property ;
+    rdfs:label "intended_role_by_class" ;
+    rdfs:domain hqdm:kind_of_functional_object ;
+    rdfs:range hqdm:role .
+
+hqdm:intersection_of a rdf:Property ;
+    rdfs:label "intersection_of" ;
+    rdfs:domain hqdm:requirement_specification ;
+    rdfs:range hqdm:class_of_state .
+
+hqdm:involves a rdf:Property ;
+    rdfs:label "involves" ;
+    rdfs:domain hqdm:defined_relationship ;
+    rdfs:range hqdm:classification .
+
+hqdm:lower_bound a rdf:Property ;
+    rdfs:label "lower_bound" ;
+    rdfs:domain hqdm:physical_quantity_range ;
+    rdfs:range hqdm:physical_quantity .
+
+hqdm:meets_specification a rdf:Property ;
+    rdfs:label "meets_specification" ;
+    rdfs:domain hqdm:sales_product ;
+    rdfs:range hqdm:requirement_specification .
+
+hqdm:member a rdf:Property ;
+    rdfs:label "member" ;
+    rdfs:domain hqdm:classification ;
+    rdfs:range hqdm:thing .
+
+hqdm:member__of a rdf:Property ;
+    rdfs:label "member__of" ;
+    rdfs:domain hqdm:thing ;
+    rdfs:range hqdm:class .
+
+hqdm:member_of a rdf:Property ;
+    rdfs:label "member_of" ;
+    rdfs:domain hqdm:class,
+        hqdm:relationship,
+        hqdm:spatio_temporal_extent ;
+    rdfs:range hqdm:class_of_class,
+        hqdm:class_of_relationship,
+        hqdm:class_of_spatio_temporal_extent .
+
+hqdm:member_of_ a rdf:Property ;
+    rdfs:label "member_of_" ;
+    rdfs:domain hqdm:class_of_spatio_temporal_extent,
+        hqdm:representation_by_sign,
+        hqdm:sign ;
+    rdfs:range hqdm:class_of_class_of_spatio_temporal_extent,
+        hqdm:pattern,
+        hqdm:representation_by_pattern .
+
+hqdm:member_of_currency a rdf:Property ;
+    rdfs:label "member_of_currency" ;
+    rdfs:domain hqdm:amount_of_money ;
+    rdfs:range hqdm:currency .
+
+hqdm:member_of_kind a rdf:Property ;
+    rdfs:label "member_of_kind" ;
+    rdfs:domain hqdm:defined_relationship,
+        hqdm:individual,
+        hqdm:participant,
+        hqdm:physical_property ;
+    rdfs:range hqdm:kind_of_individual,
+        hqdm:kind_of_physical_property,
+        hqdm:kind_of_relationship_with_signature,
+        hqdm:role .
+
+hqdm:natural_role a rdf:Property ;
+    rdfs:label "natural_role" ;
+    rdfs:domain hqdm:biological_system ;
+    rdfs:range hqdm:role .
+
+hqdm:natural_role_by_class a rdf:Property ;
+    rdfs:label "natural_role_by_class" ;
+    rdfs:domain hqdm:kind_of_biological_system ;
+    rdfs:range hqdm:role .
+
+hqdm:offeror a rdf:Property ;
+    rdfs:label "offeror" ;
+    rdfs:domain hqdm:offering ;
+    rdfs:range hqdm:party .
+
+hqdm:part a rdf:Property ;
+    rdfs:label "part" ;
+    rdfs:domain hqdm:aggregation ;
+    rdfs:range hqdm:spatio_temporal_extent .
+
+hqdm:part__of a rdf:Property ;
+    rdfs:label "part__of" ;
+    rdfs:domain hqdm:spatio_temporal_extent ;
+    rdfs:range hqdm:spatio_temporal_extent .
+
+hqdm:part__of_by_class a rdf:Property ;
+    rdfs:label "part__of_by_class" ;
+    rdfs:domain hqdm:class_of_spatio_temporal_extent ;
+    rdfs:range hqdm:class_of_spatio_temporal_extent .
+
+hqdm:part_of a rdf:Property ;
+    rdfs:label "part_of" ;
+    rdfs:domain hqdm:activity ;
+    rdfs:range hqdm:activity .
+
+hqdm:part_of_ a rdf:Property ;
+    rdfs:label "part_of_" ;
+    rdfs:domain hqdm:socially_constructed_activity ;
+    rdfs:range hqdm:agreement_execution .
+
+hqdm:part_of_by_class a rdf:Property ;
+    rdfs:label "part_of_by_class" ;
+    rdfs:domain hqdm:class_of_socially_constructed_activity,
+        hqdm:role ;
+    rdfs:range hqdm:class_of_reaching_agreement,
+        hqdm:kind_of_activity .
+
+hqdm:part_of_by_class_ a rdf:Property ;
+    rdfs:label "part_of_by_class_" ;
+    rdfs:domain hqdm:class_of_socially_constructed_activity,
+        hqdm:role ;
+    rdfs:range hqdm:class_of_agreement_execution,
+        hqdm:kind_of_association .
+
+hqdm:part_of_plan a rdf:Property ;
+    rdfs:label "part_of_plan" ;
+    rdfs:domain hqdm:requirement ;
+    rdfs:range hqdm:plan .
+
+hqdm:part_of_possible_world a rdf:Property ;
+    rdfs:label "part_of_possible_world" ;
+    rdfs:domain hqdm:spatio_temporal_extent ;
+    rdfs:range hqdm:possible_world .
+
+hqdm:participant_in a rdf:Property ;
+    rdfs:label "participant_in" ;
+    rdfs:domain hqdm:participant ;
+    rdfs:range hqdm:participant_in_activity_or_association .
+
+hqdm:period_offered a rdf:Property ;
+    rdfs:label "period_offered" ;
+    rdfs:domain hqdm:offering ;
+    rdfs:range hqdm:period_of_time .
+
+hqdm:ranges_over a rdf:Property ;
+    rdfs:label "ranges_over" ;
+    rdfs:domain hqdm:physical_property_range ;
+    rdfs:range hqdm:physical_property .
+
+hqdm:references a rdf:Property ;
+    rdfs:label "references" ;
+    rdfs:domain hqdm:activity ;
+    rdfs:range hqdm:thing .
+
+hqdm:references_by_class a rdf:Property ;
+    rdfs:label "references_by_class" ;
+    rdfs:domain hqdm:kind_of_activity ;
+    rdfs:range hqdm:class .
+
+hqdm:represented a rdf:Property ;
+    rdfs:label "represented" ;
+    rdfs:domain hqdm:representation_by_pattern ;
+    rdfs:range hqdm:thing .
+
+hqdm:represents a rdf:Property ;
+    rdfs:label "represents" ;
+    rdfs:domain hqdm:representation_by_sign ;
+    rdfs:range hqdm:thing .
+
+hqdm:required_role_player a rdf:Property ;
+    rdfs:label "required_role_player" ;
+    rdfs:domain hqdm:kind_of_relationship_with_restriction ;
+    rdfs:range hqdm:classification .
+
+hqdm:roles a rdf:Property ;
+    rdfs:label "roles" ;
+    rdfs:domain hqdm:kind_of_relationship_with_signature ;
+    rdfs:range hqdm:class .
+
+hqdm:sold_as a rdf:Property ;
+    rdfs:label "sold_as" ;
+    rdfs:domain hqdm:sales_product_version ;
+    rdfs:range hqdm:sales_product .
+
+hqdm:sold_under a rdf:Property ;
+    rdfs:label "sold_under" ;
+    rdfs:domain hqdm:sales_product ;
+    rdfs:range hqdm:product_brand .
+
+hqdm:subclass a rdf:Property ;
+    rdfs:label "subclass" ;
+    rdfs:domain hqdm:specialization ;
+    rdfs:range hqdm:class .
+
+hqdm:successor a rdf:Property ;
+    rdfs:label "successor" ;
+    rdfs:domain hqdm:sales_product_version ;
+    rdfs:range hqdm:sales_product_version .
+
+hqdm:superclass a rdf:Property ;
+    rdfs:label "superclass" ;
+    rdfs:domain hqdm:specialization ;
+    rdfs:range hqdm:class .
+
+hqdm:temporal__part_of a rdf:Property ;
+    rdfs:label "temporal__part_of" ;
+    rdfs:domain hqdm:spatio_temporal_extent ;
+    rdfs:range hqdm:spatio_temporal_extent .
+
+hqdm:temporal_part_of a rdf:Property ;
+    rdfs:label "temporal_part_of" ;
+    rdfs:domain hqdm:state ;
+    rdfs:range hqdm:individual .
+
+hqdm:temporal_part_of_ a rdf:Property ;
+    rdfs:label "temporal_part_of_" ;
+    rdfs:domain hqdm:period_of_time ;
+    rdfs:range hqdm:possible_world .
+
+hqdm:unit a rdf:Property ;
+    rdfs:label "unit" ;
+    rdfs:domain hqdm:scale ;
+    rdfs:range hqdm:unit_of_measure .
+
+hqdm:upper_bound a rdf:Property ;
+    rdfs:label "upper_bound" ;
+    rdfs:domain hqdm:physical_quantity_range ;
+    rdfs:range hqdm:physical_quantity .
+
+hqdm:uses a rdf:Property ;
+    rdfs:label "uses" ;
+    rdfs:domain hqdm:identification_of_physical_quantity ;
+    rdfs:range hqdm:scale .
+
+hqdm:whole a rdf:Property ;
+    rdfs:label "whole" ;
+    rdfs:domain hqdm:aggregation ;
+    rdfs:range hqdm:spatio_temporal_extent .
+
